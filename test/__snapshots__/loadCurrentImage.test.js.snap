@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadCurrentImage should load current image on canvas 1`] = `Array []`;
+
+exports[`loadCurrentImage should load function parameter as image on canvas 1`] = `Array []`;

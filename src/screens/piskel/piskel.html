@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piskel</title>
+    <link rel="stylesheet" href="piskel.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <%= require('html-loader!../../components/header/header.html') %>
+        <main class="main">
+            <section class="left-section">
+                <%= require('html-loader!../../components/pen-size-container/pen-size-container.html') %>
+                <%= require('html-loader!../../components/tools/tools.html') %>
+                <%= require('html-loader!../../components/palette/palette.html') %>
+                <%= require('html-loader!../../components/keyboard-shortcuts/keyboard-shortcuts.html') %>
+            </section>
+            <%= require('html-loader!../../components/frame-section/frame-section.html') %>
+            <%= require('html-loader!../../components/canvas/canvas.html') %>
+            <section class="right-section">
+                <%= require('html-loader!../../components/animated-preview/animated-preview.html') %>
+                <%= require('html-loader!../../components/resize-button/resize-button.html') %>
+                <%= require('html-loader!../../components/export-button/export-button.html') %>
+                <p id="canvas-info" class="right-section__canvas-info"></p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

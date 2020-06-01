@@ -1,0 +1,229 @@
+.keyboard-shortcuts {
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    width: 80%;
+    height: 65px;
+    background-image: url("../../components/keyboard-shortcuts/assets/images/keyboard.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        border: 3px solid yellow;
+        box-shadow: 0px 0px 5px -1px rgba(255,255,255,1);
+    }
+
+    &__info {
+        display: none;
+        position: absolute;
+        left: 80px;
+        top: 0;
+        padding: 10px 15px;
+        white-space: nowrap;
+        font-size: 1.1rem;
+        color: white;
+        background-color: black;
+        border: 2px inset rgb(160, 160, 160);
+        border-radius: 40px 0px 40px 0px;
+        z-index: 100;
+    }
+
+    &:hover {
+        .keyboard-shortcuts__info {
+            display: block;
+        }
+    }
+}
+
+.modal-window {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 15vw;
+    width: 70vw;
+    border-radius: 5px;
+    z-index: 2000;
+
+    &_available {
+        display: block;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 5rem;
+        color: black;
+        background-color: yellow;
+
+        &_exit {
+            margin: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+            background-color: yellow;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    &__cheatsheet {
+        padding: 10px;
+        background-color: black;
+    }
+
+    .shortcuts {
+        &__item {
+            display: flex;
+            margin: 10px 0 10px 100px;
+
+            &_icon {
+                width: 40px;
+                height: 40px;
+                background-color: grey;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 20px 20px;
+                border-radius: 3px;
+
+                &[data-tool="pencil"] {
+                    background-image: url("../../components/tools/assets/images/pencil.png");
+                }
+
+                &[data-tool="pipette"] {
+                    background-image: url("../../components/tools/assets/images/color-picker.png");
+                }
+        
+                &[data-tool="bucket"] {
+                    background-image: url("../../components/tools/assets/images/bucket.png");
+                }
+        
+                &[data-tool="paint-all"] {
+                    background-image: url("../../components/tools/assets/images/paint-all.png");
+                }
+        
+                &[data-tool="eraser"] {
+                    background-image: url("../../components/tools/assets/images/eraser.png");
+                }
+        
+                &[data-tool="stroke"] {
+                    background-image: url("../../components/tools/assets/images/stroke-line.png");
+                }
+
+                &[data-tool="fullscreen"] {
+                    background-image: url("../../components/animated-preview/assets/images/fullscreen.png");
+                }
+
+                &[data-tool="palette-swap"] {
+                    background-image: url("../../components/palette/assets/images/reverse-button.png");
+                }
+
+                &[data-tool="add-frame-button"] {
+                    font-size: 4rem;
+                    text-align: center;
+                    color: white;
+                }
+            }
+
+            &_name {
+                padding: 0 15px;
+                width: 200px;
+                font-size: 1.8rem;
+                line-height: 4rem;
+                color: white;
+            }
+
+            &_key {
+                margin: 0 20px;
+                width: 40px;
+                font-size: 2rem;
+                line-height: 4rem;
+                text-align: center;
+                text-transform: uppercase;
+                color: yellow;
+                border: 2px solid yellow;
+                border-radius: 3px;
+            }
+
+            &_input {
+                padding-left: 5px;
+                width: 100px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: white;
+                background-color: rgba(255, 255, 255, 0.25);
+                border: 1px solid yellow;
+                border-radius: 3px 0 0 3px;
+                text-transform: uppercase;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+
+                &::placeholder {
+                    font-size: 1.4rem;
+                    font-weight: normal;
+                    text-transform: lowercase;
+                    color: rgb(179, 179, 179);
+                }        
+            }
+
+            &_button {
+                padding: 0 10px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: rgb(48, 48, 48);
+                background-color: yellow;
+                border: none;
+                border-radius: 0 3px 3px 0;
+                cursor: pointer;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: rgb(255, 255, 88);
+                }
+
+                &_disable {
+                    pointer-events: none;
+                    background-color: rgb(182, 182, 182);
+                    cursor: not-allowed;
+
+                    &:hover {
+                        background-color: rgb(182, 182, 182);
+                    }
+                }
+            }
+
+            &_error {
+                margin-left: 20px;
+                font-size: 1.3rem;
+                line-height: 4rem;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+}

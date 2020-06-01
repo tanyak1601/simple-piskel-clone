@@ -1,0 +1,74 @@
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tool {
+        position: relative;
+        margin: 4px 2px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(100, 100, 100);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(130, 130, 130);
+        }
+
+        &_active {
+            border: 3px solid yellow;
+        }
+
+        &[data-tool="pencil"] {
+            background-image: url("../../components/tools/assets/images/pencil.png");
+        }
+
+        &[data-tool="pipette"] {
+            background-image: url("../../components/tools/assets/images/color-picker.png");
+        }
+
+        &[data-tool="bucket"] {
+            background-image: url("../../components/tools/assets/images/bucket.png");
+        }
+
+        &[data-tool="paint-all"] {
+            background-image: url("../../components/tools/assets/images/paint-all.png");
+        }
+
+        &[data-tool="eraser"] {
+            background-image: url("../../components/tools/assets/images/eraser.png");
+        }
+
+        &[data-tool="stroke"] {
+            background-image: url("../../components/tools/assets/images/stroke-line.png");
+        }
+
+        &__info {
+            display: none;
+            position: absolute;
+            left: 50px;
+            top: -10px;
+            padding: 10px 15px;
+            white-space: nowrap;
+            font-size: 1.1rem;
+            color: white;
+            background-color: black;
+            border: 2px inset rgb(160, 160, 160);
+            border-radius: 40px 0px 40px 0px;
+            z-index: 100;
+
+            &_key {
+                text-transform: uppercase;
+                color: yellow;
+            }
+        }
+
+        &:hover {
+            .tool__info {
+                display: block;
+            }
+        }
+    }
+}

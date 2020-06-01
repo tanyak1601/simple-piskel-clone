@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Joystix Monospace";
+    src: url("../../components/header/assets/fonts/joystixMonospace.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    background-color: #2D2D2D;
+
+    &__logo {
+        padding: 0 0 0 15px;
+        font-size: 2rem;
+        line-height: 3.6rem;
+        word-spacing: -7px;
+        font-family: "Joystix Monospace", monospace;
+        text-transform: uppercase;
+        color: white; 
+    }
+
+    &__buttons {
+        display: flex;
+        padding: 0 20px 0 0;
+    }
+
+    &__button {
+        display: none;
+        padding: 0 5px;
+        margin: 0 3px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        background-color: yellow;
+        border: none;
+        border-radius: 3px;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: white; 
+        }
+
+        &_able {
+            display: block;
+        }
+    }
+}
+
+.custom-google-button {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    padding-left: 35px;
+    width: 150px;
+    height: 30px;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    background-image: url('../../components/header/assets/images/btn_google_signin_light_focus_web.png');
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    border-radius: 3px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_disable {
+      display: none;
+  }
+}
+
+.google-user-name {
+    padding: 0 10px;
+    font-size: 1.4rem;
+    line-height: 2.4em;
+    color: yellow;
+}

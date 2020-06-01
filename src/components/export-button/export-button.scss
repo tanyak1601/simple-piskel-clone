@@ -1,0 +1,132 @@
+.export {
+    position: relative;
+    margin-top: 50px;
+    
+    &__open {
+        padding-left: 30px;
+        width: 120px;
+        height: 40px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: white;
+        background-color: rgb(100, 100, 100);
+        background-image: url("../../components/export-button/assets/images/export.png");
+        background-repeat: no-repeat;
+        background-position: 10% 50%;
+        border: none;
+        border-radius: 5px;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: rgb(130, 130, 130);
+        }
+    }
+
+    &__window {
+        display: none;
+        position: absolute;
+        top: -20px;
+        left: -60px;
+        width: 250px;
+        background-color: #1D1D1D;
+        border: 3px solid rgb(100, 100, 100);
+        border-radius: 5px;
+        z-index: 1;
+
+        &_title {
+            width: 100%;
+            font-size: 1.7rem;
+            line-height: 4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .scale {
+            font-size: 1.4rem;
+            color: white;
+
+            &__label {
+                padding: 0 10px;
+                vertical-align: top;
+            }
+
+            &__value {
+                display: inline-block;
+                margin: 0 5px;
+                height: 21px;
+                width: 40px;
+                font-size: 1.2rem;
+                line-height: 20px;
+                text-align: center;
+                vertical-align: top;
+                color: yellow;
+                border: 1px solid yellow;
+                border-radius: 3px;
+            }
+
+            &__resolution {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+
+                &_size {
+                    color: yellow;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px 10px;
+
+            &__export-button {
+                padding: 0 5px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                line-height: 3rem;
+                background-color: yellow;
+                border: none;
+                border-radius: 5px;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            &__exit {
+                width: 30px;
+                height: 30px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 50%;
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover {
+                    color: yellow;
+                    border: 2px solid yellow;
+                }
+            }
+        }
+
+        &_available {
+            display: block;
+        }
+    }
+}

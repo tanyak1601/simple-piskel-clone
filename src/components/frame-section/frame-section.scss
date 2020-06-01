@@ -1,0 +1,181 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #3f3f3f; 
+}
+
+::-webkit-scrollbar-thumb {
+background: rgb(139, 139, 139); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgb(197, 197, 197); 
+}
+
+.frame-section {
+    margin-right: 10px;
+    width: 160px;
+    height: calc(100vh - 46px);
+    overflow: auto;
+
+    &__add {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 5px auto;
+        width: 96px;
+        color: white;
+        border: 3px solid rgb(100, 100, 100);
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+            border: 3px solid yellow;
+        }
+
+        p:nth-child(2) {
+            margin: 5px;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p:nth-child(3) {
+            margin: 2px;
+            font-size: 1.3rem;
+            text-align: left;
+            color: rgb(130, 130, 130);
+        }
+
+        &_info {
+            display: none;
+            position: absolute;
+            left: 20px;
+            top: -40px;
+            padding: 10px 15px;
+            white-space: nowrap;
+            font-size: 1.1rem;
+            color: white;
+            background-color: black;
+            border: 2px inset rgb(160, 160, 160);
+            border-radius: 40px 0 40px 0;
+            z-index: 100;
+
+            &_key {
+                text-transform: uppercase;
+                color: yellow;
+            }
+        }
+
+        &:hover {
+            .frame-section__add_info {
+                display: block;
+            }
+        }
+    }
+}
+
+.frames {
+    position: relative;
+    .frame {
+        position: relative;
+        margin: 5px auto;
+        width: 120px;
+        height: 120px;
+        border: 3px solid rgb(100, 100, 100);
+        border-radius: 3px;
+
+        &:hover {
+            border: 3px solid rgb(180, 180, 180);
+        }
+
+        &_active {
+            border: 3px solid yellow;
+
+            &:hover {
+                border: 3px solid yellow;
+            }
+        }
+
+        &__canvas {
+            width: 100%;
+            height: 100%;
+            image-rendering: pixelated;
+            background-color: rgb(151, 151, 151);
+            background-image: linear-gradient( 41deg, rgb(133, 133, 133) 25%, transparent 25%, transparent 74%, rgb(133, 133, 133) 75%, rgb(133, 133, 133)), 
+                              linear-gradient( 41deg, rgb(133, 133, 133) 25%, transparent 25%, transparent 73%, rgb(133, 133, 133) 75%, rgb(133, 133, 133));
+            background-size: 16px 16px;
+            background-position: 0 0, 8px 8px;
+        }
+
+        &__button {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: rgba(100, 100, 100, 0.6);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            cursor: pointer;
+
+            &_delete{
+                display: none;
+                top: 0;
+                right: 0;
+                background-image: url("../../components/frame-section/assets/images/delete.png");
+            }
+
+            &_move{
+                display: none;
+                bottom: 0;
+                left: 0;
+                background-image: url("../../components/frame-section/assets/images/move.png");
+                cursor: move;
+            }
+
+            &_duplicate{
+                display: none;
+                bottom: 0;
+                right: 0;
+                background-image: url("../../components/frame-section/assets/images/duplicate.png");
+            }
+        }
+
+        &:hover {
+            .frame__button {
+                &_delete,
+                &_move,
+                &_duplicate {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.frame-shadow {
+    position: absolute;
+    width: 119px;
+    height: 119px;
+    background-color: rgba(255, 255, 0, 0.2);
+    border: 3px dashed yellow;
+}
+
+.frame.frame-target {
+    border: 3px dashed red;
+    .frame__canvas {
+        background-color: rgb(147, 150, 112);
+        background-image: linear-gradient( 41deg, rgb(168, 163, 93) 25%, transparent 25%, transparent 74%, rgb(168, 163, 93) 75%, rgb(168, 163, 93)), 
+                          linear-gradient( 41deg, rgb(168, 163, 93) 25%, transparent 25%, transparent 73%, rgb(168, 163, 93) 75%, rgb(168, 163, 93));
+    }
+}
+
+.frame.buttons-disable:hover {
+    .frame__button {
+        &_delete,
+        &_move {
+            display: none;
+        }
+    }    
+}

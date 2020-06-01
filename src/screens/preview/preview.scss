@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "Joystix Monospace";
+    src: url("../../components/header/assets/fonts/joystixMonospace.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    max-width: 100vw;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(90, 90, 90);
+    background-image: linear-gradient( 41deg, rgb(95, 95, 95) 25%, transparent 25%, transparent 74%, rgb(95, 95, 95) 75%, rgb(95, 95, 95)), 
+                      linear-gradient( 41deg, rgb(95, 95, 95) 25%, transparent 25%, transparent 73%, rgb(95, 95, 95) 75%, rgb(95, 95, 95));
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    background-color: #2D2D2D;
+
+    &__logo {
+        padding: 0 0 0 15px;
+        font-size: 2rem;
+        line-height: 3.6rem;
+        word-spacing: -7px;
+        font-family: "Joystix Monospace", monospace;
+        text-transform: uppercase;
+        color: white; 
+    }
+
+    &__button {
+        display: block;
+        padding: 0 5px;
+        margin: 0 3px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 2.4rem;
+        text-decoration: none;
+        color: black;
+        background-color: yellow;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white; 
+        }
+    }
+}
+
+.main {
+    .overview {
+        display: flex;
+        padding: 30px;
+        width: 100%;
+
+        &__about {
+            width: 40%;
+            color: white;
+            
+            &_title {
+                padding: 20px 0;
+                font-size: 4rem;
+            }
+
+            &_info {
+                max-width: 400px;
+                padding: 10px 0;
+                font-size: 2.6rem;
+            }
+
+            &_button {
+                display: block;
+                margin: 20px 0;
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 2.2rem;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(44, 44, 44);
+                background-color: yellow;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+        }
+ 
+        &__screenshot {
+            width: 60%;
+            height: 400px;
+            background-image: url('assets/images/screenshot1.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+
+
+        }
+    }
+
+    .examples {
+        padding: 20px 0;
+        background-color: #3d3d3d;
+
+        &__title {
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+        }
+        
+        &__container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+
+            &_item {
+                margin: 20px 25px;
+                width: 150px;
+                height: 150px;
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                border: 5px solid rgb(87, 87, 87);
+
+                &:nth-child(1) {
+                    background-image: url('assets/images/gif1.gif');
+                }
+
+                &:nth-child(2) {
+                    background-image: url('assets/images/gif2.gif');
+                }
+
+                &:nth-child(3) {
+                    background-image: url('assets/images/gif3.gif');
+                }
+
+                &:nth-child(4) {
+                    background-image: url('assets/images/gif4.gif');
+                }
+
+                &:nth-child(5) {
+                    background-image: url('assets/images/gif5.gif');
+                }
+
+                &:nth-child(6) {
+                    background-image: url('assets/images/gif6.gif');
+                }
+            }
+        }
+    }
+
+    .functionality {
+        padding: 20px;
+        background-color: #242424;
+        
+        &__title {
+            padding-bottom: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .feature {
+                margin: 15px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                color: white;
+                background-color: rgba(90, 90, 90, 0.15);
+                border-radius: 5px;
+
+                &__preview {
+                    margin: 10px;
+                    width: 100px;
+                    height: 100px;
+                    border: 3px solid rgb(255, 255, 255);
+                    background-color: black;
+                    background-size: 100% auto;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                }
+
+                &__about {
+                    width: 300px;
+                    &_title {
+                        font-size: 2rem;
+                    }
+
+                    &_info {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &:nth-child(1) > .feature__preview {
+                    background-image: url('assets/images/google-sign-in.png');
+                    background-size: 40px 40px;
+                }
+
+                &:nth-child(2) > .feature__preview {
+                    background-image: url('assets/images/pen-size.png');
+                }
+
+                &:nth-child(3) > .feature__preview {
+                    background-image: url('assets/images/tools.png');
+                    background-size: auto 100%;
+                }
+
+                &:nth-child(4) > .feature__preview {
+                    background-image: url('assets/images/palette.png');
+                }
+
+                &:nth-child(5) > .feature__preview {
+                    background-image: url('assets/images/frame.png');
+                }
+
+                &:nth-child(6) > .feature__preview {
+                    background-image: url('assets/images/animation-preview.png');
+                    background-size: auto 100%;
+                }
+
+                &:nth-child(7) > .feature__preview {
+                    background-image: url('assets/images/resize.png');
+                }
+
+                &:nth-child(8) > .feature__preview {
+                    background-image: url('assets/images/export.png');
+                }
+
+                &:nth-child(9) > .feature__preview {
+                    background-image: url('assets/images/keyboard-shortcuts.png');
+                }
+
+                &:nth-child(10) > .feature__preview {
+                    background-image: url('assets/images/hover-tips.png');
+                }
+
+
+            }
+
+
+        }
+    }
+
+    .author {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        
+
+        &__name {
+            padding-right: 10px;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        &__github {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url('assets/images/github-logo.png');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    }
+}
